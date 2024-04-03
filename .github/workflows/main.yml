@@ -6,8 +6,9 @@ jobs:
   Date:
     runs-on: ubuntu-latest
     steps:
-      - name: Test with environment variables
-        run: |
-          echo "MY_DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
-          echo "SHA=${{github.sha}}| tail -c 6" >> $GITHUB_ENV
-          echo ${{env.MY_DATE}} and ${{env.SHA}}
+      - name: Get Date
+        run: echo "MY_DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
+      - name: Get SHA
+        run: echo "SHA=${{github.sha}}| tail -c 6" >> $GITHUB_ENV
+      - name: Output
+        run: echo ${{env.MY_DATE}} and ${{env.SHA}}
