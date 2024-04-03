@@ -10,7 +10,7 @@ jobs:
       #   id: date
       #   run: echo "{date}=${date +'%Y-%m-%d'}" >> $GITHUB_OUTPUT
       - name: Test with environment variables
-        run: echo "MY_DATE=$(date +%Y%m%d)" >> $GITHUB_ENV
+        run: echo "MY_DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
       - name: Test MY_DATE variable
         run: echo ${{ env.MY_DATE }}
         
