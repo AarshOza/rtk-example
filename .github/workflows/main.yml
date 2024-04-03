@@ -6,9 +6,9 @@ jobs:
   Date:
     runs-on: ubuntu-latest
     steps:
-      - name: Get current date
-        id: date
-        run: echo "{date}=${date +'%Y-%m-%d'}" >> $GITHUB_OUTPUT
+      # - name: Get current date
+      #   id: date
+      #   run: echo "{date}=${date +'%Y-%m-%d'}" >> $GITHUB_OUTPUT
       - name: Test with environment variables
         run: echo $DATE
         env:
