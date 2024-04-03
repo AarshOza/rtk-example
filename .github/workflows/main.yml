@@ -11,4 +11,4 @@ jobs:
           echo "MY_DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
           echo "SHA=${{github.sha}}| tail -c 6" >> $GITHUB_ENV
       - name: Test MY_DATE variable
-        run: echo ${{ env.MY_DATE }} and ${{env_SHA}}
+        run: echo ${{env.MY_DATE}} and ${{env.SHA}}
