@@ -12,4 +12,6 @@ jobs:
       - name: Test with environment variables
         run: echo $DATE
         env:
-          DATE: $(date +'%Y-%m-%d')
+          DATE: "{$(date+'%Y-%m-%d')}"
+          
+          # DATEs: $(date +'%Y-%m-%d')
