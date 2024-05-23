@@ -5,6 +5,9 @@ on:
 jobs:
   Date:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ../../rtk-blog/
     steps:
       - name: Get Date
         run: echo "MY_DATE=$(date +%Y-%m-%d)" >> $GITHUB_ENV
@@ -12,3 +15,5 @@ jobs:
         run: echo "SHA=${{github.sha}}| tail -c 6" >> $GITHUB_ENV
       - name: Output
         run: echo ${{env.MY_DATE}} and ${{env.SHA}}
+      - name: Path
+        run: echo ${{working-directory}}
