@@ -16,4 +16,4 @@ jobs:
       - name: Output
         run: echo ${{env.MY_DATE}} and ${{env.SHA}}
       - name: Path
-        run: echo ${{working-directory}}
+        run: echo ${{env.working-directory}}
